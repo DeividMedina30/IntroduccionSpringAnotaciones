@@ -12,10 +12,10 @@ Para ilustrar el uso del framework Spring, y el ambiente de desarrollo para el u
 
 3. Haciendo uso de la [configuración de Spring basada en anotaciones](https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-spring-beans-and-dependency-injection.html) marque con las anotaciones @Autowired y @Service las dependencias que deben inyectarse, y los 'beans' candidatos a ser inyectadas -respectivamente-:
 
-	* GrammarChecker será un bean, que tiene como dependencia algo de tipo 'SpellChecker'.
-	* EnglishSpellChecker y SpanishSpellChecker son los dos posibles candidatos a ser inyectados. Se debe seleccionar uno, u otro, mas NO ambos (habría conflicto de resolución de dependencias). Por ahora haga que se use EnglishSpellChecker.
+    * GrammarChecker será un bean, que tiene como dependencia algo de tipo 'SpellChecker'.
+    * EnglishSpellChecker y SpanishSpellChecker son los dos posibles candidatos a ser inyectados. Se debe seleccionar uno, u otro, mas NO ambos (habría conflicto de resolución de dependencias). Por ahora haga que se use EnglishSpellChecker.
  
-5.	Haga un programa de prueba, donde se cree una instancia de GrammarChecker mediante Spring, y se haga uso de la misma:
+4. Haga un programa de prueba, donde se cree una instancia de GrammarChecker mediante Spring, y se haga uso de la misma:
 
 	```java
 	public static void main(String[] args) {
@@ -25,4 +25,18 @@ Para ilustrar el uso del framework Spring, y el ambiente de desarrollo para el u
 	}
 	```
 	
-6.	Modifique la configuración con anotaciones para que el Bean ‘GrammarChecker‘ ahora haga uso del  la clase SpanishSpellChecker (para que a GrammarChecker se le inyecte EnglishSpellChecker en lugar de  SpanishSpellChecker. Verifique el nuevo resultado.
+5. Modifique la configuración con anotaciones para que el Bean ‘GrammarChecker‘ ahora haga uso del  la clase SpanishSpellChecker (para que a GrammarChecker se le inyecte EnglishSpellChecker en lugar de  SpanishSpellChecker. Verifique el nuevo resultado.
+
+Rta//
+
+### Usando serviceEnglishSpellChecker
+
+![](img/UsandoServiceEnglishSpellChecker.PNG)
+
+![](img/UsandoServiceEnglishSpellChecker2.PNG)
+
+### Usando serviceSpanishSpellChecker
+
+![](img/UsandoServiceSpanishSpellChecker.PNG)
+
+![](img/UsandoServiceSpanishSpellChecker2.PNG)
